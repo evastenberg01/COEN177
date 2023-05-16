@@ -1,0 +1,10 @@
+Eva Stenberg
+COEN177L - Thursday 2:15PM
+Lab 5 Observations
+==========================
+
+Step 1: The threadSync program executes the created threads in order. The statements "Thread <i> Entered Critical Section.." 
+and "Thread <i> returned" are printed in order from 0 to 9. This program differs from the threadHello program because it 
+implements synchronization with semaphores that force each thread to wait its turn to execute the go function. The threadHello 
+program did not implement semaphores so the output of the program varied each time it was run.
+

@@ -1,0 +1,18 @@
+Eva Stenberg
+COEN177L - Thursday 2:15PM
+Lab4 - Observations
+==========================
+
+Step 1: When running threadHello.c, the program does not produce the same result if you run it multiple times because 
+the numbers of the threads occasionally repeat. The print statement "Hello from thread <num> with thread ID <num>" 
+prints sometimes and sometimes it only says "Thread <num> returned". When running a CPU benchmarking software, the output 
+of the threadHello program did not change and each output was different like before. The thread function *go with its parameter (void *arg) 
+takes a variable that is per-thread which is stored in the thread's stack.
+Because i is a static variable means that it is global in scope so therefore it is in the shared state for the threads. 
+The compiler stores this variable in the global variables memory portion of the process.
+
+Step 2:
+The modified program's output is the same as threadHello.c program except that it prints out the thread ID number 
+each time instead of randomly statement and a problem is that the "Main thread done." statement is not always the last output. 
+Removing the pthread_join command prevents the main thread from waiting for all its children before terminating so the
+"Main thread done" statement can print out before it's actually done.

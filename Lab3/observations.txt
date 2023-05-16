@@ -1,0 +1,51 @@
+Step 1:
+This program executes code that is the equivalent of the command line code: "ls | sort" using pipes for IPC.
+"ls | sort" displays the contents of the current directory in alphanumeric order.
+
+Output:
+    a.out
+    lab3_1.c
+    lab3_2.c
+    observations.txt
+    step1.c
+    step2.c
+    step3.c
+    step4.c
+    step5.c
+    step6.c
+
+Step 2:
+This program sends cmd line arguments from one process to another process for output using pipes.
+
+Output:
+    Writer on the upstream end of the pipe -> 1 arguments 
+
+    Reader on the downstream end of the pipe 
+    . / a . o u t 
+
+Step 3:
+This program sends the output of the "ls" command from one process to another for output using pipes. It is a modification of the program from step 2.
+Output: 
+    Writer on the upstream end of the pipe -> 1 arguments 
+
+    Reader on the downstream end of the pipe 
+    L a b 3 _ 3 . c 
+    a . o u t 
+    l a b 3 _ 1 . c 
+    l a b 3 _ 2 . c 
+    o b s e r v a t i o n s . t x t 
+    s t e p 1 . c 
+    s t e p 2 . c 
+    s t e p 3 . c 
+    s t e p 4 . c 
+    s t e p 5 . c 
+    s t e p 6 . c 
+
+Step 4:
+This program executes code that is the equivalent of the command line code: "cat /etc/passwd | grep root" using pipes for IPC.
+
+Step 5:
+This program implements the producer-consumer message communication using pipes. 
+
+Step 6: 
+This program creates 9 threads and prints out values of i from 1-10
